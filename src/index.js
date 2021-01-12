@@ -11,24 +11,49 @@ import {
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Home, Post, Search, Categories, NavBar, Widget, Comment, LeaveComment, Btns, AddPost} from './Home';
-import Login from './Login';
+import { Post, Search, Categories, NavBar, Widget, Comment, LeaveComment, Btns, AddPost} from './Home';
+import {Login,Register} from './Login';
+import Home from "./Home"
+import {Receptie} from './connect'
+import{AddCar} from './licenta/functii';
 
+/*const express = require('express')
+const app = express()
+/*
+app.use(express.urlencoded({
+  extended: true
+}))
 
+app.post('/', (req, res) => {
+  const username = req.body.username
+  //...
+  console.log(username.curent.value);
+  //return res.redirect('/Home')
+});
+
+*/
 ReactDOM.render(
 <React.StrictMode>
 
 
+
 <Router>
   <Switch>
-      <Route exact path= "/Login">
-        <Login/>      
+      <Route path= "/login">
+        <Login />
+      </Route>
+      <Route path= "/functii">
+        <AddCar />
+      </Route>
+
+      <Route path= "/register">
+        <Register />
+      
       </Route>
       <Route exact path= "/">
+
         <NavBar />
-        <Home/>
-        <Home/>
-        <Home/>
+        <Home />
         <Search />
         <Categories />
         <Widget />
@@ -44,6 +69,7 @@ ReactDOM.render(
         <Comment />
         <Comment />
         
+        
 
       </Route>
       <Route path="/AddPost">
@@ -55,7 +81,7 @@ ReactDOM.render(
       </Route> 
   </Switch>
 </Router>
-
+        
 </React.StrictMode>,
 
 document.getElementById('root')
