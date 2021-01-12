@@ -1,5 +1,5 @@
 {
-"type": "module",
+  "proxy": "https://localhost:4000",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +7,13 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cors-proxy": "^1.0.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
@@ -35,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/runtime": "^7.12.5"
   }
 }
